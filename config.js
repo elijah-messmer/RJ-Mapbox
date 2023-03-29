@@ -1,3 +1,161 @@
+function hideLegend() {d3.select('#legend').style('opacity', 0)};
+
+function updateLegend1() {
+    const title = 'Total Restorative Justice Laws';
+    const layers = ['1', '2-7', '7-14', '14-21', '21-28', '28-37'];
+    const colors = ['#31463f', '#3b6a52', '#538f5d', '#78b45f', '#acd85b', '#ebf952'];
+
+    d3.select('#legend').transition().duration(1000).style('opacity', 1);
+
+    const legend = document.querySelector('#legend');
+
+    // update legend title
+    const legendTitle = legend.querySelector('.legend-title');
+    legendTitle.textContent = title;
+
+    // delete existing legend items
+    const legendItems = legend.querySelectorAll('.legend-item');
+    legendItems.forEach(item => item.remove());
+
+    // create new legend items
+    layers.forEach((layer, i) => {
+    const newItem = document.createElement('div');
+    newItem.classList.add('legend-item');
+    const newKey = document.createElement('div');
+    newKey.classList.add('legend-key');
+    newKey.style.backgroundColor = colors[i];
+    newItem.appendChild(newKey);
+    const newValue = document.createElement('div');
+    newValue.classList.add('legend-value');
+    newValue.textContent = layer;
+    newItem.appendChild(newValue);
+    legend.appendChild(newItem);
+    });
+
+    // wrap all legend items in one div
+    const legendItemsDiv = document.createElement('div');
+    legendItemsDiv.classList.add('legend-items');
+    const newLegendItems = legend.querySelectorAll('.legend-item');
+    newLegendItems.forEach(item => legendItemsDiv.appendChild(item));
+    legend.appendChild(legendItemsDiv);
+    };
+
+
+function updateLegend2() {
+    const title = 'Concentration of Laws Passed';
+    const layers = ['0-3', '8-37'];
+    const colors = ['#badefc', '#cd395b'];
+
+    const legend = document.querySelector('#legend');
+
+    // update legend title
+    const legendTitle = legend.querySelector('.legend-title');
+    legendTitle.textContent = title;
+
+    // delete existing legend items
+    const legendItems = legend.querySelectorAll('.legend-item');
+    legendItems.forEach(item => item.remove());
+
+    // create new legend items
+    layers.forEach((layer, i) => {
+    const newItem = document.createElement('div');
+    newItem.classList.add('legend-item');
+    const newKey = document.createElement('div');
+    newKey.classList.add('legend-key');
+    newKey.style.backgroundColor = colors[i];
+    newItem.appendChild(newKey);
+    const newValue = document.createElement('div');
+    newValue.classList.add('legend-value');
+    newValue.textContent = layer;
+    newItem.appendChild(newValue);
+    legend.appendChild(newItem);
+    });
+
+    // wrap all legend items in one div
+    const legendItemsDiv = document.createElement('div');
+    legendItemsDiv.classList.add('legend-items');
+    const newLegendItems = legend.querySelectorAll('.legend-item');
+    newLegendItems.forEach(item => legendItemsDiv.appendChild(item));
+    legend.appendChild(legendItemsDiv);
+    };
+
+function updateLegend3() {
+    const title = 'Adult Restorative Justice Laws';
+    const layers = ['1', '2-7', '7-14', '14-21', '21-28', '28-37'];
+    const colors = ['#31463f', '#3b6a52', '#538f5d', '#78b45f', '#acd85b', '#ebf952'];
+    
+    const legend = document.querySelector('#legend');
+    
+    // update legend title
+    const legendTitle = legend.querySelector('.legend-title');
+    legendTitle.textContent = title;
+    
+    // delete existing legend items
+    const legendItems = legend.querySelectorAll('.legend-item');
+    legendItems.forEach(item => item.remove());
+    
+    // create new legend items
+    layers.forEach((layer, i) => {
+    const newItem = document.createElement('div');
+    newItem.classList.add('legend-item');
+    const newKey = document.createElement('div');
+    newKey.classList.add('legend-key');
+    newKey.style.backgroundColor = colors[i];
+    newItem.appendChild(newKey);
+    const newValue = document.createElement('div');
+    newValue.classList.add('legend-value');
+    newValue.textContent = layer;
+    newItem.appendChild(newValue);
+    legend.appendChild(newItem);
+    });
+    
+    // wrap all legend items in one div
+    const legendItemsDiv = document.createElement('div');
+    legendItemsDiv.classList.add('legend-items');
+    const newLegendItems = legend.querySelectorAll('.legend-item');
+    newLegendItems.forEach(item => legendItemsDiv.appendChild(item));
+    legend.appendChild(legendItemsDiv);
+    };
+
+    function updateLegend4() {
+        const title = 'Total Restorative Justice Laws';
+        const layers = ['1', '2-7', '7-14', '14-21', '21-28', '28-37'];
+        const colors = ['#31463f', '#3b6a52', '#538f5d', '#78b45f', '#acd85b', '#ebf952'];
+        
+        const legend = document.querySelector('#legend');
+        
+        // update legend title
+        const legendTitle = legend.querySelector('.legend-title');
+        legendTitle.textContent = title;
+        
+        // delete existing legend items
+        const legendItems = legend.querySelectorAll('.legend-item');
+        legendItems.forEach(item => item.remove());
+        
+        // create new legend items
+        layers.forEach((layer, i) => {
+        const newItem = document.createElement('div');
+        newItem.classList.add('legend-item');
+        const newKey = document.createElement('div');
+        newKey.classList.add('legend-key');
+        newKey.style.backgroundColor = colors[i];
+        newItem.appendChild(newKey);
+        const newValue = document.createElement('div');
+        newValue.classList.add('legend-value');
+        newValue.textContent = layer;
+        newItem.appendChild(newValue);
+        legend.appendChild(newItem);
+        });
+        
+        // wrap all legend items in one div
+        const legendItemsDiv = document.createElement('div');
+        legendItemsDiv.classList.add('legend-items');
+        const newLegendItems = legend.querySelectorAll('.legend-item');
+        newLegendItems.forEach(item => legendItemsDiv.appendChild(item));
+        legend.appendChild(legendItemsDiv);
+        };
+      
+
 var config = {
     style: 'mapbox://styles/elijah-messmer/clfh50gc3008e01t504qj16d7',
     accessToken: 'pk.eyJ1IjoiZWxpamFoLW1lc3NtZXIiLCJhIjoiY2xmYWNkMnFnMDRiZTNwcGJsM2J0ZjRpeCJ9.srDYVTRF4yqQ9QIz5b3EvA',
@@ -10,7 +168,6 @@ var config = {
     theme: 'dark',
     use3dTerrain: false, //set true for enabling 3D maps.
     auto: false,
-    footer: 'Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
         {
             id: 'buffer',
@@ -24,7 +181,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: '',
+            callback: 'hideLegend',
             onChapterEnter: [
                 {
                     layer: 'rj-legislation',
@@ -38,7 +195,8 @@ var config = {
             id: 'first-identifier',
             alignment: 'left',
             hidden: false,
-            description: 'Restorative justice laws and organizations have expanded significantly over the last 10 years, but access is far from equal.',
+            title: 'A Patchwork of Laws',
+            description: 'The number of Restorative justice laws has increased significantly over the last 10 years, but access is far from equal.',
             location: {
                 center: [-98.05708, 38.17605],
                 zoom: 4.23,
@@ -47,7 +205,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: '',
+            callback: 'updateLegend1',
             onChapterEnter: [
                 {
                     layer: 'rj-legislation',
@@ -67,7 +225,7 @@ var config = {
             id: 'second-identifier',
             alignment: 'left',
             hidden: false,
-            description: "Just eight states have passed over <b>half</b> of the country's restorative justice laws. The bottom half of states have three or less of these laws.",
+            description: "Just <b style='color: #cd395b'>eight states</b> have passed over half of the country's restorative justice laws. The <b style='color: #badefc'>bottom half of states</b> have three or less of these laws.",
             location: {
                 center: [-98.05708, 38.17605],
                 zoom: 4.23,
@@ -76,17 +234,17 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: '',
+            callback: 'updateLegend2',
             onChapterEnter: [
                 {
-                    layer: 'rj-legislation-top8',
+                    layer: 'rj-legislation-8',
                     opacity: 1,
                     duration: 2000
                 }
             ],
             onChapterExit: [
                 {
-                    layer: 'rj-legislation-top8',
+                    layer: 'rj-legislation-8',
                     opacity: 0,
                     duration: 2000
                 }
@@ -96,7 +254,7 @@ var config = {
             id: 'third-identifier',
             alignment: 'left',
             hidden: false,
-            description: 'Such laws are aimed heavily at minors, with relatively fewer restorative justice laws being passed for adult offenders throughout much of the country.',
+            description: 'Across the United States, there are <b>27%</b> fewer restorative justice laws for adult offenders than there are for minors.',
             location: {
                 center: [-98.05708, 38.17605],
                 zoom: 4.23,
@@ -105,7 +263,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: '',
+            callback: 'updateLegend3',
             onChapterEnter: [
                 {
                     layer: 'rj-organizations',
@@ -130,19 +288,13 @@ var config = {
             id: 'fourth-identifier',
             alignment: 'right',
             hidden: false,
-            // image: './path/to/image/source.png',
-            description: 'Alongside legislation, dozens of private and public organizations across the country are practicing restorative justice. From official court programs to informal community groups, these organizations can vary significantly in their exact approach to restorative justice.',
+            title: 'An Organization for Every Need',
+            description: 'Alongside legislation, dozens of private and public organizations <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="7.5" r="6.5" fill="#cd395b" stroke="#fff" stroke-width="1" opacity="0.9"/></svg> across the country are practicing restorative justice. From official court programs to informal community groups, these organizations can vary significantly in their exact approach to restorative justice.',
             location: {
                 center: [-98.05708, 38.17605],
                 zoom: 4.23,
                 pitch: 0.00,
                 bearing: 0.00
-                // flyTo additional controls-
-                // These options control the flight curve, making it move
-                // slowly and zoom out almost completely before starting
-                // to pan.
-                //speed: 2, // make the flying slow
-                //curve: 1, // change the speed at which it zooms out
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -150,7 +302,7 @@ var config = {
             onChapterEnter: [
                 {
                     layer: 'rj-organizations',
-                    opacity: .7,
+                    opacity: .8,
                     duration: 2000
                 },
                 {
@@ -235,25 +387,3 @@ var config = {
         },
     ]
 };
-
-// /* 
-// Add an event listener that runs
-//   when a user clicks on the map element.
-// */
-// function tooltips() {
-//     map.on('mouseOver', (event) => {
-//     // If the user clicked on one of your markers, get its information.
-//     const features = map.queryRenderedFeatures(event.point, {
-//       layers: ['rj-organizations'] // replace with your layer name
-//     });
-//     if (!features.length) {
-//       return;
-//     }
-//     const feature = features[0];
-  
-//     const popup = new mapboxgl.Popup({ offset: [0, -15] })
-//     .setLngLat(feature.geometry.coordinates)
-//     .setHTML(`<h3>${feature.properties.name}</h3><p>${feature.properties.description}</p>`
-//   )
-//   .addTo(map);
-//   })};
