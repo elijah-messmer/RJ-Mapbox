@@ -298,7 +298,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: 'tooltips',
+            callback: 'updateLegend4',
             onChapterEnter: [
                 {
                     layer: 'rj-organizations',
@@ -353,7 +353,7 @@ var config = {
             id: 'seventh-identifier',
             alignment: 'left',
             hidden: false,
-            // image: './path/to/image/source.png',
+            title: 'The Messy Reality',
             description: 'But even in a state like Colorado, which has passed more restorative justice laws than any other state in the country, the reality of implementing a new system is far from perfect.',
             location: {
                 center: [-105.54100, 38.64783],
